@@ -1,4 +1,4 @@
-export function fetchCountry(name) {  
+const fetchCountries = function (name) {  
   return fetch(
     `https://restcountries.com/v3.1/name/${name}?fields=name,capital,population,languages,flags`,
   )
@@ -10,3 +10,5 @@ export function fetchCountry(name) {
       return response.json();
       });
 }  
+
+export { fetchCountries };
