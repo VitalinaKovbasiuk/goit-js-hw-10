@@ -175,8 +175,8 @@ function createItem(element) {
       <img
         src="${flags.svg}" 
         alt="${name.official}" 
-        width="20" 
-        height="20">
+        width="80" 
+        height="50">
       <h1 class="country-info__title">${name.official}</h1>
       <ul class="country-info__list">
           <li class="country-info__item">
@@ -204,8 +204,8 @@ function createList(elements) {
         <img class="country-list__img" 
           src="${flags.svg}" 
           alt="${name.official}" 
-          width="20" 
-          height="20">
+          width="50" 
+          height="50">
         ${name.official}
       </li>`
     )
