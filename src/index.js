@@ -135,7 +135,7 @@ function onInputChange(e) {
   fetchCountries(countryName)
     .then(data => {
       if (data.length > 10) {
-        specificNameInfo(Notify.info('Too many matches found. Please enter a more specific name.'));
+        specificNameInfo();
         clearTemplate();
         return;
       }
@@ -143,9 +143,17 @@ function onInputChange(e) {
     })
     .catch(error => {
       clearTemplate();
-      errorWarn(Notify.failure(`Oops, there is no country with that name`));
+      errorWarn();
     });
 }
+
+function errorWarn() {
+    Notify.failure(`Oops, there is no country with that name`);
+  }
+
+  function specificNameInfo() {
+    Notify.info(`Too many matches found. Please enter a more specific name.`);
+  }
 
 function clearTemplate() {
     refs.countriInfo.innerHTML = '';
